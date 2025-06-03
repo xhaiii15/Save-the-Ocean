@@ -6,19 +6,19 @@ pygame.mixer.pre_init(44100, 16, 2, 4096)
 pygame.init()
 
 # Play background music
-pygame.mixer.music.load("bloxfruit_bgmusic.mp3")
+pygame.mixer.music.load("game_music_sounds/bloxfruit_bgmusic.mp3")
 pygame.mixer.music.set_volume(1.0)
 pygame.mixer.music.play(-1)
 
 width, height = 500, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Save The Ocean")
-background_image = pygame.image.load("1_game_background (1).png")
+background_image = pygame.image.load("game_bg/1_game_background (1).png")
 
-start_img = pygame.image.load("play.png").convert_alpha()
-exit_img = pygame.image.load("quit.png").convert_alpha()
+start_img = pygame.image.load("play_img/play.png").convert_alpha()
+exit_img = pygame.image.load("quit_img/quit.png").convert_alpha()
 
-logo_img = pygame.image.load("logo.png").convert_alpha()
+logo_img = pygame.image.load("logo_img/logo.png").convert_alpha()
 logo_width = 400
 logo_height = 400
 logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))

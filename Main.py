@@ -25,9 +25,9 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Save the Ocean')
 
 # Sound files
-good_item_sound = pygame.mixer.Sound('coinpoint.wav')
-bad_item_sound = pygame.mixer.Sound('bubblepop.wav')
-player_movement_sound = pygame.mixer.Sound('movement.wav')
+good_item_sound = pygame.mixer.Sound('game_music_sounds/coinpoint.wav')
+bad_item_sound = pygame.mixer.Sound('game_music_sounds/bubblepop.wav')
+player_movement_sound = pygame.mixer.Sound('game_music_sounds/movement.wav')
 
 # Volume levels
 good_item_sound.set_volume(0.2)
@@ -35,33 +35,33 @@ bad_item_sound.set_volume(0.1)
 player_movement_sound.set_volume(0.01)
 
 # Load game assets
-background_image = pygame.image.load('1_game_background (1).png')
+background_image = pygame.image.load('game_bg/1_game_background (1).png')
 player_image = pygame.transform.scale(
-    pygame.image.load('cactus-mccoy-2-the-ruins-of-calavera-butterfly-net-clip-art-net-thumbnail-removebg-preview.png'),
+    pygame.image.load('player_img/cactus-mccoy-2-the-ruins-of-calavera-butterfly-net-clip-art-net-thumbnail-removebg-preview.png'),
     (65, 65)
 )
 fish1 = pygame.transform.scale(
-    pygame.image.load('fish1.png'),
+    pygame.image.load('fish_imgs/fish1.png'),
     (85, 85)
 )
 fish2 = pygame.transform.scale(
-    pygame.image.load('fish2.png'),
+    pygame.image.load('fish_imgs/fish2.png'),
     (85, 85)
 )
 fish3 = pygame.transform.scale(
-    pygame.image.load('fish3.png'),
+    pygame.image.load('fish_imgs/fish3.png'),
     (85, 85)
 )
 trash1 = pygame.transform.scale(
-    pygame.image.load('trash1.png'),
+    pygame.image.load('trash_imgs/trash1.png'),
     (90, 90)
 )
 trash2 = pygame.transform.scale(
-    pygame.image.load('trash2.png'),
+    pygame.image.load('trash_imgs/trash2.png'),
     (70, 70)
 )
 trash3 = pygame.transform.scale(
-    pygame.image.load('trash3.png'),
+    pygame.image.load('trash_imgs/trash3.png'),
     (100, 100)
 )
 
@@ -93,7 +93,7 @@ falling_object_types = [
 ]
 
 # Play background music
-pygame.mixer.music.load("bloxfruit_bgmusic.mp3")
+pygame.mixer.music.load("game_music_sounds/bloxfruit_bgmusic.mp3")
 pygame.mixer.music.set_volume(1.0)
 pygame.mixer.music.play(-1)
 
@@ -103,11 +103,11 @@ def draw_background():
 
 
 # Load button images
-try_again_button_image = pygame.image.load('play.png')
-quit_button_image = pygame.image.load('quit.png')
+try_again_button_image = pygame.image.load('play_img/play.png')
+quit_button_image = pygame.image.load('quit_img/quit.png')
 
 def game_over_screen():
-    original_game_over_image = pygame.image.load('gameover.png')  
+    original_game_over_image = pygame.image.load('gameover_img/gameover.png')  
     new_width = 450  # Set the new width you want
     new_height = 250  # Set the new height you want
     game_over_image = pygame.transform.scale(original_game_over_image, (new_width, new_height))
@@ -118,8 +118,8 @@ def game_over_screen():
 
     screen.blit(game_over_image, (game_over_x, game_over_y))
     
-    try_again_button_image = pygame.transform.scale(pygame.image.load('play.png'), (250, 250))
-    quit_button_image = pygame.transform.scale(pygame.image.load('quit.png'), (250, 250))
+    try_again_button_image = pygame.transform.scale(pygame.image.load('play_img/play.png'), (250, 250))
+    quit_button_image = pygame.transform.scale(pygame.image.load('quit_img/quit.png'), (250, 250))
     
     try_again_button_rect = screen.blit(try_again_button_image, (10, 350))
     quit_button_rect = screen.blit(quit_button_image, (250, 350))
