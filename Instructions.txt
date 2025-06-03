@@ -1,0 +1,9 @@
+Open the "Main.py" file inside Gamification folder.
+use what IDE you have, but we prefer Vs code.
+
+Use arrow key left(<===) and right(===>) to control.
+Catch the trash and avoid catching fishes.
+You only have 10 lives.
+COLLECT MANY TRASH!
+
+Thank you! enjoy the game.
